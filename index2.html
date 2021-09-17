@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mans Documents</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        h3 {
+        color: rgb(194, 6, 6);
+    }
+</style>
+</head>
+<body onload="startTime()">
+    
+    <h3>Mans pulkstenis</h3>
+
+    <div id="txt"></div>
+    
+    <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+    <!-- <p>2021-09-16</p>  -->
+        <!-- <p>2021-09-16</p>  -->
+    <!-- <p id="shodiena" style="color: rgb(59, 117, 194); background-color: orange;">16/9/2021 18:39</p>  -->
+    <!-- rgb(223, 232, 245) -->
+    
+    
+    <style>
+        body {
+            background-color: rgb(152, 218, 152);
+        }
+    </style>
+    <script>
+        console.log("Sveiki shodien!!!");
+        alert("Sveiki Dialogaa ABC");
+    </script>
+</body>
+</html>
