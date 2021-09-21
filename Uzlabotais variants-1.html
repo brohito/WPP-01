@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mans Documents</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        h3 {
+        color: rgb(255, 230, 9);
+    }
+        div {
+              width: 60px;
+    }
+    </style>
+</head>
+<body onload="startTime()">
+   <h1>Sveiki!</h1>
+    <h2>Mani sauc Inga Andronova</h2>
+    <p>Nedaudz par mani: 
+      Dzīvoju Jelgavas novadā.
+      Strādāju Rīgā. Esmu grāmatvede, strādaju nelielā uzņēmumā. </p>
+      <br>
+      <p>Esmu, manuprāt, <b>komunikabla</b>, varētu būt, ka arī <b>jautra personība</b>. Patīk mācīties ko jaunu, jo nekad nevar zināt, kur un kad tas var noderēt. Uzskatu, ka labāk ir zināt kaut ko nekā nezināt neko. </p>
+      <p>Uzskatu, ka gandrīz jebkura lieta vai problēma ir  risināma, tik vajag gribēšanu un apņēmību. </p>
+     
+    <p>Mani interesē WEB programmēšana, es to varētu pielietot lietderīgi savā ikdienas darbā. </p>
+    
+      <h3>Mans pulkstenis</h3>
+
+      <div id="txt" style="color:#ddd;background-color:orange;"></div>
+
+      <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+
+      <style>
+      body {background-color: green;}
+
+      </style>
+      <script>
+        // console.log("Sveiki");
+        alert("Sveiki Dialogaa");
+
+
+
+      </script>
+  
+
+   
+
+    <p> &copy; 2021</p>
+    
+  </body>
+</html>
