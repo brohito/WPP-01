@@ -1,35 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mans Documents</title>
-    <link rel="stylesheet" href="main.css">
 <style>
-    h3 {
-    color: rgb(255, 230, 9);
+body {
+  background-color: green;
 }
-    div {
-          width: 110px;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+a {
+  color: rgb(36, 36, 58);
+}
+div {
+              width: 60px;
+    }
+h1   {color: rgb(0, 255, 42);}
+p    {color: rgb(202, 199, 21);}
+h3   {color: rgb(235, 162, 28);}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>repl.it</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
 </style>
 </head>
-<body>
-    <!-- <p>2021-09-16</p>  -->
-        <!-- <p>2021-09-16</p>  -->
-    <!-- <p id="shodiena" style="color: rgb(59, 117, 194); background-color: orange;">16/9/2021 18:39</p>  -->
-    <!-- rgb(223, 232, 245) -->
-    <h3>Mans pulkstenis</h3>
-    <div><p id="shodiena" style="color: rgb(148, 32, 32); background-color: orange;">16/9/2021 18:55</p></div>
-    <style>
-        body {
-            background-color: green;
-        }
-    </style>
-    <script>
-        console.log("Sveiki shodien!!!");
-        alert("Sveiki Dialogaa ABC");
-    </script>
-</body>
+
+<body onload="startTime()">
+<h2>Sveiki!</h>
+<h2>Mani sauc Edgars.</h2>
+<h2>Man patīk peldēt, tas ir mans hobijs.</h2>
+<h1 style="text-align:center;">Peldēšanas sports Latvijā</h1>
+<img src="https://image.sciencenorway.no/1455509.jpg?imageId=1455509&width=1058&height=604" alt="sciencenorway.no" style="width:500px;height:300px;">
+<hr>
+<h3 style="text-align:center;">Īsa vēsture</h3>
+<hr>
+<p>19.07.1851. Jelgavā nodibināta peldu biedrība Dousche (Dousche – Bade – Gesellschaft in Mitau). Biedrības mērķis bija izplatīt aktīva dzīvesveida idejas pilsētas vācu sabiedrībā, galveno uzmanību vēršot drošai atpūtai pie ūdens, peldētapmācībai un slīcēju glābšanai.
+Līdz 20. gs. sākumam peldētapmācību un sacensību organizēšanu atklātajās ūdenstilpnēs uzņēmās tās sporta biedrības, kuru ietvaros darbojās atsevišķas peldēšanas sekcijas vai peldēšanas entuziastu grupas. Līdz 1903. gadam peldēšanas sporta aktivitātes organizēja Rīgas airētāju klubs (Rigaer Ruder-Club), Rīgas jahtklubs (Rigaer Yachtclub), Vidzemes jahtklubs (Livländischer Yachtclub) un sporta biedrība Kaiserwald. 1903. gadā Rīgas jūrmalā darbību sāka Majoru peldēšanas skola. 26.04.1905. nodibināta Majoru Peldēšanas (Peldu) biedrība. Šo datumu pieņemts uzskatīt par Latvijas peldēšanas sporta aizsākumu.
+</p>
+
+
+
+
+<div id="txt" style="color:#ddd;background-color:rgb(196, 8, 243);"></div>
+
+
+<script>
+  function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+  </script>
+
+<a href="https://slides.com/edgarsbrasmanis/deck-6c69bf">Īsumā par mani un WEB.</a>
+<p> &copy; 2021</p>
+   <script>
+     console.log("Sveiki shodien!!!");
+        alert("Sveiki manā Lapelee!!!!");
+   </script>
+  </body>
 </html>
